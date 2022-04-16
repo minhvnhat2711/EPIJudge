@@ -8,8 +8,17 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def even_odd(A: List[int]) -> None:
-    # TODO - you fill in here.
-    return
+    # Solution:
+    # last_even serves as a boundary
+    # goal is to swap even number to the boundary
+
+    last_even = 0
+    for index, value in enumerate(A):
+        # if odd
+        if value % 2 == 0:
+            A[index], A[last_even] = A[last_even], A[index]
+            last_even += 1
+    return A
 
 
 @enable_executor_hook

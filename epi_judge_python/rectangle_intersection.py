@@ -9,6 +9,7 @@ Rect = collections.namedtuple('Rect', ('x', 'y', 'width', 'height'))
 def intersect_rectangle(r1: Rect, r2: Rect) -> Rect:
     # TODO - you fill in here.
     return Rect(0, 0, 0, 0)
+    
 
 
 def intersect_rectangle_wrapper(r1, r2):

@@ -6,6 +6,7 @@ from test_framework import generic_test
 
 def even_odd_merge(L: ListNode) -> Optional[ListNode]:
     # TODO - you fill in here.
+    
     return None
 
 

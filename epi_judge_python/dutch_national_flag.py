@@ -10,6 +10,19 @@ RED, WHITE, BLUE = range(3)
 
 def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
     # TODO - you fill in here.
+    pivot = A[pivot_index]
+    # first pass: partition smaller numbers
+    smaller = 0
+    larger = len(A) - 1
+    for i, v in enumerate(A):
+        if v < pivot:
+            A[i], A[smaller] = A[smaller], A[i]
+            smaller += 1
+    # NOTE: cant reverse enumerate since it's a generator, we can put them into a list first
+    for i, v in reversed(list(enumerate(A))):
+        if v > pivot:
+            A[i], A[larger] = A[larger], A[i]
+            larger -= 1
     return
 
 
